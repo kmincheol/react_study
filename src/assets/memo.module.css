@@ -1,0 +1,26 @@
+input {
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border:1px solid black
+}
+
+.d_flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.save_btn {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(90, 90, 247);
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 0;
+    cursor: pointer;
+}

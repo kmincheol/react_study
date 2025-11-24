@@ -5,6 +5,8 @@ import GreetingForm from './components/GreetingForm';
 import FormPractice from './components/FormPractice';
 import TaskList from './components/TaskList';
 import UserList from './components/UserList';
+import ProductList from './components/ProductList';
+import MemoInput from './components/MemoInput';
 
 function App() {
     const isLoggedIn = true;
@@ -23,27 +25,34 @@ function App() {
 
     return (
         <div>
-            <UserCard name="김민철" age="33" />
-            <LikeButton />
-            <InputExample />
-            <GreetingForm />
-            <FormPractice />
+            <div style={{display:'none'}}>
+                <UserCard name="김민철" age="33" />
+                <LikeButton />
+                <InputExample />
+                <GreetingForm />
+                <FormPractice />
 
 
-            <p>{isLoggedIn ? '환영합니다' : '로그인해주세요'}</p>
-            <p>{hasNewMessage && 'test'}</p>
+                <p>{isLoggedIn ? '환영합니다' : '로그인해주세요'}</p>
+                <p>{hasNewMessage && 'test'}</p>
 
-            {content}
+                {content}
 
-            <ul>
-                {list.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
-            </ul>
+                <ul>
+                    {list.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
 
-            <TaskList tasks={taskList} />
+                <TaskList tasks={taskList} />
 
-            <UserList />
+                <UserList />
+
+                <ProductList />
+            </div>
+            <div>
+                <MemoInput />
+            </div>
         </div>
     );
 }
