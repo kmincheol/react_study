@@ -1,25 +1,8 @@
-import { useState } from "react";
-import memoStyle from '../assets/memo.module.css';
-
-function MemoInput() {
-    const [content, setContent] = useState("");
-
-    const changeContent = (e) => {
-        setContent(e.target.value);
-    }
-
-    const saveEvent = () => {
-        console.log(content);
-        setContent("");
-    }
-
+function MemoInput({ value, onChange }) {
     return (
-        <>
-            <div className={memoStyle.d_flex}>
-                <input type="text" placeholder="내용" onChange={changeContent}/>
-                <button className={memoStyle.save_btn} onClick={saveEvent}>메모저장</button>
-            </div>
-        </>
+        <div>
+            <input type="text" value={value} onChange={(e) => onChange(e.target.value)} placeholder="메모를 입력하세요." />
+        </div>
     );
 }
 

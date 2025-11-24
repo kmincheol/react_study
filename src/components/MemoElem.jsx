@@ -1,23 +1,12 @@
-import { useState } from "react";
+import Button from "./Button";
+import style from '../assets/memo.module.css';
 
-function MemoElem({ memo, mUpdate, mDelete }) {
+function MemoElem({memo}) {
     return (
-        <div>
-            <div>
-                <div>
-                    이름 : <input type="text" value={memo.name} />
-                </div>
-                <div>
-                    내용 : <input type="text" value={memo.content} />
-                </div>
-                <div>
-                    <button onClick={() => mUpdate()}></button>
-                    <button onClick={() => mDelete(memo.id)}></button>
-                </div>
-            </div>
-
-        </div>
-    )
+        <li>
+            {memo}
+        </li>
+    );
 }
 
 export default MemoElem;
